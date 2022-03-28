@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,9 @@ import 'package:hamaara_uttrakhand/custom_widgets/custom_buton.dart';
 import 'package:hamaara_uttrakhand/login_screen.dart/login_screen.dart';
 import 'package:hamaara_uttrakhand/screens/home_screen/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart' as http;
+
+import '../../services/envs.dart';
 
 String acess = "";
 
@@ -31,7 +35,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     checkForAcessToken(); //Following is the method, that will look for the acess token in the local storage, and will assign it in local variable if present
-
 //Following is the timer, that will hold the splash screen according to the required time
     Timer(const Duration(seconds: 5), () {
       //Here need to perform a check, whether the acess token is already stored in the local storage

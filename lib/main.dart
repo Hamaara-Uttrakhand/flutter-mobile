@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hamaara_uttrakhand/config/color_pallete.dart';
-import 'package:hamaara_uttrakhand/screens/otp_screen/otp_screen.dart';
+
 import 'package:hamaara_uttrakhand/screens/splash_screen/spalsh_screen.dart';
 
 void main() {
